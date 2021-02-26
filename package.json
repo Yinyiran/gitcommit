@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "lint": "eslint --ext .js,.ts,.tsx src/"
+  },
+  "husky": {
+    "hookes": {
+      "pre-commit": "npm lint",
+      "commit-msg": "node script/verify-commit.js",
+      "pre-push": "npm test"
+    }
+  },
+  "devDependencies": {
+    "chalk": "^4.1.0",
+    "eslint": "^7.20.0",
+    "husky": "^5.1.1"
+  }
+}
